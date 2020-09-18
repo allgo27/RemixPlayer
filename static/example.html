@@ -1,0 +1,60 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/static/embed.css">
+</head>
+<body>
+    <h1>Check out this part of a podcast</h1>
+
+    <p>
+    Ever wanted to embed a snippet of audio without editing it yourself? Here's an embed:
+    </p>
+
+    <script src="/embed/" async=""></script>
+
+    <script src="/embed/?data=%5B%7B%22start%22%3A29%2C%22end%22%3A80%2C%22src%22%3A%22https%3A%2F%2Fcdn.simplecast.com%2Faudio%2F49fe14%2F49fe14cf-8aef-4a4f-83ca-a3ac86a522d8%2Fbcb9c322-285f-45c8-a711-13e031e11340%2Fa-poem-for-letting-yourself-be_tc.mp3%3Faid%3Drss_feed%22%2C%22title%22%3A%22Poetry%20Unbound%22%2C%22episode%22%3A%22A%20Poem%20for%20Letting%20Yourself%20Be%22%2C%22imagesrc%22%3A%22https%3A%2F%2Fcdn.simplecast.com%2Fimages%2F8b774a2b-4c5b-4893-b25f-d045583d8230%2F053f0b36-2380-4f6b-b672-9abade809c59%2F3000x3000%2F3000x3000-poetryunbound-logo.jpg%3Faid%3Drss_feed%22%7D%2C%7B%22start%22%3A119%2C%22end%22%3A185%2C%22src%22%3A%22https%3A%2F%2Fcdn.simplecast.com%2Faudio%2F49fe14%2F49fe14cf-8aef-4a4f-83ca-a3ac86a522d8%2Fbcb9c322-285f-45c8-a711-13e031e11340%2Fa-poem-for-letting-yourself-be_tc.mp3%3Faid%3Drss_feed%22%2C%22title%22%3A%22Poetry%20Unbound%22%2C%22episode%22%3A%22A%20Poem%20for%20Letting%20Yourself%20Be%22%2C%22imagesrc%22%3A%22https%3A%2F%2Fcdn.simplecast.com%2Fimages%2F8b774a2b-4c5b-4893-b25f-d045583d8230%2F053f0b36-2380-4f6b-b672-9abade809c59%2F3000x3000%2F3000x3000-poetryunbound-logo.jpg%3Faid%3Drss_feed%22%7D%5D" async=""></script>
+
+    <p>
+    If you look at the source you can see that that url is pretty ugly, so you probably want to use something like this:
+    </p>
+
+    <pre><code>
+    &lt;script&gt;
+    var mix = [
+      {
+        start: 29,
+        end: 80,
+        src: 'https://cdn.simplecast.com/audio/49fe14/49fe14cf-8aef-4a4f-83ca-a3ac86a522d8/bcb9c322-285f-45c8-a711-13e031e11340/a-poem-for-letting-yourself-be_tc.mp3?aid=rss_feed',
+        title: 'Poetry Unbound',
+        episode: 'A Poem for Letting Yourself Be',
+        imagesrc:
+          'https://cdn.simplecast.com/images/8b774a2b-4c5b-4893-b25f-d045583d8230/053f0b36-2380-4f6b-b672-9abade809c59/3000x3000/3000x3000-poetryunbound-logo.jpg?aid=rss_feed',
+      },
+      {
+        start: 119,
+        end: 185,
+        src: 'https://cdn.simplecast.com/audio/49fe14/49fe14cf-8aef-4a4f-83ca-a3ac86a522d8/bcb9c322-285f-45c8-a711-13e031e11340/a-poem-for-letting-yourself-be_tc.mp3?aid=rss_feed',
+        title: 'Poetry Unbound',
+        episode: 'A Poem for Letting Yourself Be',
+        imagesrc: 'https://cdn.simplecast.com/images/8b774a2b-4c5b-4893-b25f-d045583d8230/053f0b36-2380-4f6b-b672-9abade809c59/3000x3000/3000x3000-poetryunbound-logo.jpg?aid=rss_feed',
+      }
+    ];
+
+    var dataPart = encodeURIComponent(JSON.stringify(mix));
+    var url = '/embed/?data='+dataPart;
+    console.log(url);
+
+    var embedScript = document.createElement('script');
+    embedScript.setAttribute('src', url);
+    embedScript.setAttribute('async', '');
+
+    document.body.appendChild(embedScript);
+    &lt;/script&gt;
+    </pre></code>
+
+    <p>
+    to build the tag for you.
+    </p>
+
+</body>
+</html>
