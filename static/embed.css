@@ -1,19 +1,30 @@
+:root {
+  --playButton: url("play.png");
+  --pauseButton: url("pause.png");
+  --backFifteen: url("backfifteen.png");
+  --back: url("back.png");
+  --forwardFifteen: url("forwardfifteen.png");
+  --forward: url("forward.png");
+  --showMore: url("showmore.png");
+  --showLess: url("showless.png");
+}
+
 .rightDiv.audio.embed {
   visibility: hidden;
   margin: 0 auto;
 }
 
-input[type='range'].scrubber.audio.embed {
+input[type="range"].scrubber.audio.embed {
   -webkit-appearance: none;
   margin: 10px 0;
   width: 275px;
 }
 
-input[type='range'].scrubber.audio.embed:focus {
+input[type="range"].scrubber.audio.embed:focus {
   outline: none;
 }
 
-input[type='range'].scrubber.audio.embed::-webkit-slider-runnable-track {
+input[type="range"].scrubber.audio.embed::-webkit-slider-runnable-track {
   /* width: 100%; */
   height: 5px;
   cursor: pointer;
@@ -22,7 +33,7 @@ input[type='range'].scrubber.audio.embed::-webkit-slider-runnable-track {
   border: 0.2px solid #010101;
 }
 
-input[type='range'].scrubber.audio.embed::-webkit-slider-thumb {
+input[type="range"].scrubber.audio.embed::-webkit-slider-thumb {
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
   border: 0.75px solid #000000;
   height: 18px;
@@ -33,7 +44,7 @@ input[type='range'].scrubber.audio.embed::-webkit-slider-thumb {
   margin-top: -7px;
 }
 
-input[type='range'].scrubber.audio.embed ::-webkit-slider-thumb:hover {
+input[type="range"].scrubber.audio.embed ::-webkit-slider-thumb:hover {
   background: #da95a4;
 }
 
@@ -89,49 +100,49 @@ input[type='range'].scrubber.audio.embed ::-webkit-slider-thumb:hover {
 }
 
 button.back.audio.embed {
-  background: url('back.png');
+  background: var(--back);
   background-size: 20px 21px;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 button.back15.audio.embed {
-  background: url('backfifteen.png');
+  background: var(--backFifteen);
   background-size: 20px;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 button.play.audio.embed {
-  background: url('play.png');
+  background: var(--playButton);
   background-size: 17px;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 button.pause.audio.embed {
-  background: url('pause.png');
+  background: var(--pauseButton);
   background-size: 18px;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 button.forward15.audio.embed {
-  background: url('forwardfifteen.png');
+  background: var(--forwardFifteen);
   background-size: 20px;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 button.forward.audio.embed {
-  background: url('forward.png');
+  background: var(--forward);
   background-size: 20px 21px;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 button.dropdown.audio.embed {
-  background: url('showmore.png');
+  background: var(--showMore);
   background-size: 20px 14px;
   background-position: center;
   background-repeat: no-repeat;
@@ -142,14 +153,14 @@ button.dropdown.audio.embed {
 }
 
 button.showmore {
-  background: url('showmore.png');
+  background: var(--showMore);
   background-size: 20px 14px;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 button.showless {
-  background: url('showless.png');
+  background: var(--showLess);
   background-size: 20px 14px;
   background-position: center;
   background-repeat: no-repeat;

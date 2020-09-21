@@ -18,7 +18,7 @@ And use in your code:
 
 **Use as a script tag:**
 
-    // Fill in later
+    <script src="https://cdn.jsdelivr.net/npm/remixplayer"></script>
 
 **Use:**
 To create an embed in your JavaScript project:
