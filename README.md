@@ -1,4 +1,4 @@
-# Audio Embed Documentation
+# RemixPlayer Documentation
 
 **Description:**
 RemixPlayer is a library that embeds audio in another webpage. RemixPlayer allows you to play a single full audio file, multiple full audio files, or multiple excerpts of audio files. Initially created for [podcast remixing](http://remixcast.com), RemixPlayer can be used to play podcasts, music, or any audio you please!
@@ -14,18 +14,18 @@ OR install from yarn:
 
 And use in your code:
 
-    import RemixPlayer from 'RemixPlayer.js'
+    import { RemixPlayer } from 'RemixPlayer'
 
 **Use as a script tag:**
 
-    <script src="https://cdn.jsdelivr.net/npm/remixplayer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/remixplayer/index.js"></script>
 
 **Use:**
 To create an embed in your JavaScript project:
 
     //A remix containing three pieces of a TED Talk with start and end times
 
-    const embed = new Embed([
+    const embed = new RemixPlayer([
     {title: "TED Talks Daily",
     episode: "How to build your confidence -- and spark it in others | Brittany Packnett",
     imagesrc: "https://pl.tedcdn.com/rss_feed_images/ted_talks_main_podcast/audio.png",
@@ -65,7 +65,7 @@ Where:
 
     //An example of playing a single, full audio file
     //Plays one full TED Talk
-    const embed = new Embed([
+    const embed = new RemixPlayer([
     {title: "TED Talks Daily",
     episode: "How to build your confidence -- and spark it in others | Brittany Packnett",
     imagesrc: "https://pl.tedcdn.com/rss_feed_images/ted_talks_main_podcast/audio.png",
@@ -78,7 +78,7 @@ Where:
 
     //An example of playing multiple, full audio files
     //Plays two full TED Talks in a row
-    const embed = new Embed([
+    const embed = new RemixPlayer([
     {title: "TED Talks Daily",
     episode: "How to build your confidence -- and spark it in others | Brittany Packnett",
     imagesrc: "https://pl.tedcdn.com/rss_feed_images/ted_talks_main_podcast/audio.png",

@@ -1,12 +1,12 @@
 :root {
-  --playButton: url("play.png");
-  --pauseButton: url("pause.png");
-  --backFifteen: url("backfifteen.png");
-  --back: url("back.png");
-  --forwardFifteen: url("forwardfifteen.png");
-  --forward: url("forward.png");
-  --showMore: url("showmore.png");
-  --showLess: url("showless.png");
+  --playButton: url("play.svg");
+  --pauseButton: url("pause.svg");
+  --backFifteen: url("backfifteen.svg");
+  --back: url("back.svg");
+  --forwardFifteen: url("forwardfifteen.svg");
+  --forward: url("forward.svg");
+  --showMore: url("showmore.svg");
+  --showLess: url("showless.svg");
 }
 
 .rightDiv.audio.embed {
@@ -152,14 +152,14 @@ button.dropdown.audio.embed {
   margin-bottom: -25px;
 }
 
-button.showmore {
+button.dropdown.audio.embed.showmore {
   background: var(--showMore);
   background-size: 20px 14px;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-button.showless {
+button.dropdown.audio.embed.showless {
   background: var(--showLess);
   background-size: 20px 14px;
   background-position: center;

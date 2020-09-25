@@ -1,6 +1,6 @@
 {
   "name": "remixplayer",
-  "version": "1.0.0",
+  "version": "2.0.1",
   "description": "RemixPlayer is a library that embeds audio in another webpage. RemixPlayer allows you to play a single full audio file, multiple full audio files, or multiple excerpts of audio files. Initially created for podcast remixing, RemixPlayer can be used to play podcasts, music, or any audio you please!",
   "main": "index.js",
   "author": "Evan Allgood",
@@ -8,17 +8,24 @@
   "homepage": "https://github.com/allgo27/RemixPlayer",
   "type": "module",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "yarn rollup -c"
   },
   "engines": {
     "node": "13.12.x"
   },
-  "dependencies": {},
   "devDependencies": {
+    "@babel/core": "^7.11.6",
     "@rollup/plugin-image": "^2.0.5",
+    "@rollup/plugin-multi-entry": "^4.0.0",
     "babel-eslint": "^10.1.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "eslint": "^7.4.0",
     "eslint-plugin-babel": "^5.3.1",
-    "prettier": "2.0.5"
+    "postcss-url": "^8.0.0",
+    "prettier": "2.0.5",
+    "rollup": "^2.28.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-postcss": "^3.1.8"
   }
 }
