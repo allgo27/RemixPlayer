@@ -1,9 +1,9 @@
 # RemixPlayer Documentation
 
-**Description:**
+**Description:**  
 RemixPlayer is a library that embeds audio in another webpage. RemixPlayer allows you to play a single full audio file, multiple full audio files, or multiple excerpts of audio files. Initially created for [podcast remixing](http://remixcast.com), RemixPlayer can be used to play podcasts, music, or any audio you please!
 
-**Install:**
+**Install:**  
 Install from npm:
 
     npm install RemixPlayer
@@ -20,7 +20,7 @@ And use in your code:
 
     <script src="https://cdn.jsdelivr.net/npm/remixplayer/index.js"></script>
 
-**Use:**
+**Use:**  
 To create an embed in your JavaScript project:
 
     //A remix containing three pieces of a TED Talk with start and end times
@@ -111,5 +111,5 @@ Where:
 | .dropDownListItem() | Updates the styling of each segment div within the dropdown (div) | A dictionary of css style properties (camelCased) keys and the value to update them to (e.g. {backgroundColor: “#1271f5”, height: “3px”} |
 | .dropDown()         | Updates the styling of the div containing the dropdown (div)      | A dictionary of css style properties (camelCased) keys and the value to update them to (e.g. {backgroundColor: “#1271f5”, height: “3px”} |
 
-**Licensing**
+**Licensing**  
 RemixPlayer is licensed under [the MIT License](https://opensource.org/licenses/MIT).
