@@ -16,10 +16,6 @@ And use in your code:
 
     import { RemixPlayer } from 'RemixPlayer'
 
-**Use as a script tag:**
-
-    <script src="https://cdn.jsdelivr.net/npm/remixplayer/index.js"></script>
-
 **Use:**  
 To create an embed in your JavaScript project:
 
@@ -60,6 +56,33 @@ Where:
 - end — at what time the audio should stop playing in seconds _(optional; default: end of audio source)_
 
 * div — HTML element that the embed should be placed in
+
+**Or use as a script tag:**
+
+    <script src="https://cdn.jsdelivr.net/npm/remixplayer/index.js"></script>
+
+    const embed = new RemixPlayer.RemixPlayer([
+    {title: "TED Talks Daily",
+    episode: "How to build your confidence -- and spark it in others | Brittany Packnett",
+    imagesrc: "https://pl.tedcdn.com/rss_feed_images/ted_talks_main_podcast/audio.png",
+    src: "https://dts.podtrac.com/redirect.mp3/download.ted.com/talks/BrittanyPacknett_2019.mp3?apikey=172BB350-0207&prx_url=https://dovetail.prxu.org/70/fbc865d8-91e5-4ec2-bcd5-2805f84ec092/BrittanyPacknett_2019_VO_Intro.mp3",
+    start: 104,
+    end: 133},
+    {title: "TED Talks Daily",
+    episode: "How to build your confidence -- and spark it in others | Brittany Packnett",
+    imagesrc: "https://pl.tedcdn.com/rss_feed_images/ted_talks_main_podcast/audio.png",
+    src: "https://dts.podtrac.com/redirect.mp3/download.ted.com/talks/BrittanyPacknett_2019.mp3?apikey=172BB350-0207&prx_url=https://dovetail.prxu.org/70/fbc865d8-91e5-4ec2-bcd5-2805f84ec092/BrittanyPacknett_2019_VO_Intro.mp3",
+    start: 236,
+    end: 433},
+    {title: "TED Talks Daily",
+    episode: "How to build your confidence -- and spark it in others | Brittany Packnett",
+    imagesrc: "https://pl.tedcdn.com/rss_feed_images/ted_talks_main_podcast/audio.png",
+    src: "https://dts.podtrac.com/redirect.mp3/download.ted.com/talks/BrittanyPacknett_2019.mp3?apikey=172BB350-0207&prx_url=https://dovetail.prxu.org/70/fbc865d8-91e5-4ec2-bcd5-2805f84ec092/BrittanyPacknett_2019_VO_Intro.mp3",
+    start: 498,
+    end: 807}
+    ]);
+
+    embed.setup(div);
 
 **Examples**
 
