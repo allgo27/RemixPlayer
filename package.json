@@ -1,6 +1,6 @@
 {
   "name": "remixplayer",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "RemixPlayer is a library that embeds audio in another webpage. RemixPlayer allows you to play a single full audio file, multiple full audio files, or multiple excerpts of audio files. Initially created for podcast remixing, RemixPlayer can be used to play podcasts, music, or any audio you please!",
   "main": "index.js",
   "author": "Evan Allgood",
